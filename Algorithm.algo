@@ -2,22 +2,22 @@ ALGORITHM Checkpoint_Alg
 VAR
     P : STRING;
     x : CHAR;
-    L,W,V : INTEGER;
+    L,W,V,i : INTEGER;
 BEGIN
     write("Give a sentence");
     read(P);
     L:=0; W:=0; V:=0;
-    WHILE (P[x]<>.) DO
+    WHILE (P[i]<>".") DO
         L:=L+1;
     END_WHILE
     write(L)
-    FOR i FROM 1 TO L DO
+    FOR i FROM 0 TO (L-1) DO
         IF (P[i]:=" ") THEN
             W:=W+1;
         END_IF
     END_FOR
-    FOR i FROM 1 TO L DO
-        IF ((P[i]=="a")or(P[i]=="e")or(P[i]=="i")or(P[i]=="o")or(P[i]=="u")) THEN
+    FOR i FROM 0 TO (L-1) DO
+        IF ((P[i]=="a") or (P[i]=="e") or (P[i]=="i") or (P[i]=="o") or (P[i]=="u")) THEN
             V:=V+1;
         END_IF
     END_FOR
