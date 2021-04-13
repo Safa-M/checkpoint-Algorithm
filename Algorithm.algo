@@ -1,7 +1,6 @@
 ALGORITHM Checkpoint_Alg
 VAR
     P : STRING;
-    x : CHAR;
     L,W,V,i : INTEGER;
 BEGIN
     write("Give a sentence");
